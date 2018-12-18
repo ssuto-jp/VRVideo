@@ -3,10 +3,10 @@ using UnityEngine.Events;
 
 public class VRPlayerInput : MonoBehaviour
 {
-    public static UnityAction OnTriggerUp;
-    public static UnityAction OnTriggerDown;
-    public static UnityAction OnTouchpadUp;
-    public static UnityAction OnTouchpadDown;
+    public event UnityAction OnTriggerUp;
+    public event UnityAction OnTriggerDown;
+    public event UnityAction OnTouchpadUp;
+    public event UnityAction OnTouchpadDown;
 
     private void Update()
     {
