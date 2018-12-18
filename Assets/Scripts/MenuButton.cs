@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 public class MenuButton : MonoBehaviour
 {
     [SerializeField] private VRInteractiveItem interactiveItem;
-    [SerializeField] private string videoName;//
+    [SerializeField] string video;
 
+    public static string videoName;
     private bool pointerOver;
 
     private void OnEnable()
@@ -35,6 +36,9 @@ public class MenuButton : MonoBehaviour
     private void ActivateButton()
     {
         if (pointerOver)
+        {
+            videoName = video;
             SceneManager.LoadScene("PlayVideo");
+        }
     }
 }

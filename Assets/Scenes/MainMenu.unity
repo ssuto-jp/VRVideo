@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactiveItem: {fileID: 327591909}
-  videoName: Video1
+  video: SampleSphere
 --- !u!114 &327591909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactiveItem: {fileID: 814674480}
-  videoName: Video2
+  video: Video1
 --- !u!1001 &824870700
 Prefab:
   m_ObjectHideFlags: 0
