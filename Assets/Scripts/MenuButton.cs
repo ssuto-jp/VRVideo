@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour
 {
     [SerializeField] private VRInteractiveItem interactiveItem;
-    [SerializeField] private GameObject cube;
+    [SerializeField] private string videoName;//
 
     private bool pointerOver;
 
@@ -34,6 +35,6 @@ public class MenuButton : MonoBehaviour
     private void ActivateButton()
     {
         if (pointerOver)
-            cube.GetComponent<MeshRenderer>().material.color = Color.black;
+            SceneManager.LoadScene("PlayVideo");
     }
 }
