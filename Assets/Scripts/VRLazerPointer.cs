@@ -29,7 +29,8 @@ public class VRLazerPointer : MonoBehaviour
             if (controller == OVRInput.Controller.RTrackedRemote)
                 return rightHandAnchor;
 
-            return centerEyeAnchor;
+            //return centerEyeAnchor;
+            return null;
         }
     }
 

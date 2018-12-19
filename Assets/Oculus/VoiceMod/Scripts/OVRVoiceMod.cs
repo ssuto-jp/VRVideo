@@ -256,7 +256,7 @@ public class OVRVoiceMod : MonoBehaviour
 
         float volume = 0;
 
-		int result = ovrVoiceModDll_GetAverageAbsVolume(context, ref volume);
+		//int result = ovrVoiceModDll_GetAverageAbsVolume(context, ref volume);
 
         return volume;
 	}
