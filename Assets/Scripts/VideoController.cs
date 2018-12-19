@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RenderHeads.Media.AVProVideo
 {
@@ -19,6 +20,11 @@ namespace RenderHeads.Media.AVProVideo
         {
             if (path != null)
                 mediaPlayer.OpenVideoFromFile(videoLocation, path, true);
+        }
+
+        public void OnFinishedPlaying()
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
