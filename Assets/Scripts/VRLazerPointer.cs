@@ -7,6 +7,7 @@ public class VRLazerPointer : MonoBehaviour
     [SerializeField] private Transform centerEyeAnchor;
     [SerializeField] private LineRenderer lazerPointerRenderer;
     [SerializeField] private VRPlayerInput playerInput;
+    [SerializeField] private VRRayTransform rayTransform;
 
     public float maxLength = 100.0f;
 
@@ -15,23 +16,6 @@ public class VRLazerPointer : MonoBehaviour
     public VRInteractiveItem CurrentInteractible
     {
         get { return _currentInteractible; }
-    }
-
-    private Transform Pointer
-    {
-        get
-        {
-            var controller = OVRInput.GetActiveController();
-
-            if (controller == OVRInput.Controller.LTrackedRemote)
-                return leftHandAnchor;
-
-            if (controller == OVRInput.Controller.RTrackedRemote)
-                return rightHandAnchor;
-
-            //return centerEyeAnchor;
-            return null;
-        }
     }
 
     private void OnEnable()
@@ -53,7 +37,7 @@ public class VRLazerPointer : MonoBehaviour
 
     private void Raycast()
     {
-        var pointer = Pointer;
+        var pointer = rayTransform.RayTransform;
         if (pointer == null || lazerPointerRenderer == null)
             return;
 

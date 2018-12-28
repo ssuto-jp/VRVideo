@@ -202,6 +202,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf27b3bcc94d1cc4cbee81d7d0005c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &190991208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190991202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cab1dacf8b190e43b85bfc8bd298490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandAnchor: {fileID: 190991205}
+  rightHandAnchor: {fileID: 190991204}
+  centerEyeAnchor: {fileID: 190991203}
+  ovrInputModule: {fileID: 1305716085}
+  ovrGazePointer: {fileID: 629322194}
 --- !u!1001 &248405858
 Prefab:
   m_ObjectHideFlags: 0
@@ -327,11 +343,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114380339749005058, guid: 23fee36d22b992d41bb86d9af6670918,
         type: 2}
-      propertyPath: centerEyeAnchor
-      value: 
-      objectReference: {fileID: 190991203}
-    - target: {fileID: 114380339749005058, guid: 23fee36d22b992d41bb86d9af6670918,
-        type: 2}
       propertyPath: leftHandAnchor
       value: 
       objectReference: {fileID: 190991205}
@@ -342,9 +353,19 @@ Prefab:
       objectReference: {fileID: 190991204}
     - target: {fileID: 114380339749005058, guid: 23fee36d22b992d41bb86d9af6670918,
         type: 2}
+      propertyPath: centerEyeAnchor
+      value: 
+      objectReference: {fileID: 190991203}
+    - target: {fileID: 114380339749005058, guid: 23fee36d22b992d41bb86d9af6670918,
+        type: 2}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 190991207}
+    - target: {fileID: 114380339749005058, guid: 23fee36d22b992d41bb86d9af6670918,
+        type: 2}
+      propertyPath: rayTransform
+      value: 
+      objectReference: {fileID: 190991208}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23fee36d22b992d41bb86d9af6670918, type: 2}
   m_IsPrefabAsset: 0
@@ -391,7 +412,7 @@ Prefab:
         type: 2}
       propertyPath: rayTransform
       value: 
-      objectReference: {fileID: 190991205}
+      objectReference: {fileID: 190991203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8498e067828e7f34cb24f238626de6b7, type: 2}
   m_IsPrefabAsset: 0
@@ -471,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayTransform: {fileID: 190991205}
+  rayTransform: {fileID: 190991203}
   m_Cursor: {fileID: 629322194}
   joyPadClickButton: 1
   gazeClickKey: 32

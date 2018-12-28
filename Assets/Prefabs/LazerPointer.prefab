@@ -57,6 +57,7 @@ MonoBehaviour:
   centerEyeAnchor: {fileID: 0}
   lazerPointerRenderer: {fileID: 120031852364348760}
   playerInput: {fileID: 0}
+  rayTransform: {fileID: 0}
   maxLength: 100
 --- !u!120 &120031852364348760
 LineRenderer:
